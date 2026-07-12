@@ -1,0 +1,34 @@
+{
+  "name": "ng-video-call",
+  "version": "0.2.19",
+  "description": "Enterprise-grade Angular communication SDK with video, audio, chat, and screen sharing powered by AWS Chime",
+  "keywords": [
+    "angular",
+    "video-call",
+    "webrtc",
+    "aws-chime",
+    "video-conferencing",
+    "communication",
+    "chat",
+    "screen-sharing",
+    "collaboration"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": ">=16.0.0",
+    "@angular/core": ">=16.0.0",
+    "@angular/forms": ">=16.0.0",
+    "@angular/platform-browser": ">=16.0.0",
+    "rxjs": ">=7.4.0"
+  },
+  "dependencies": {
+    "amazon-chime-sdk-js": "^3.22.0",
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}
