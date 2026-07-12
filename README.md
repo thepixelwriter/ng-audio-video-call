@@ -1,4 +1,4 @@
-# ng-video-call
+# ng-audio-video-call
 
 An enterprise-grade Angular communication library for video/audio conferencing, real-time chat, and screen sharing — built on **AWS Chime SDK** and published to NPM.
 
