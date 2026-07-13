@@ -1,4 +1,4 @@
-# ng-video-call
+# ng-audio-video-call
 
 Enterprise-grade Angular communication SDK with video conferencing, audio, real-time chat, and screen sharing — powered by AWS Chime SDK.
 
@@ -9,7 +9,7 @@ Inspired by Zoom, Google Meet, and Microsoft Teams. Mobile-responsive, themeable
 ## Installation
 
 ```bash
-npm install ng-video-call amazon-chime-sdk-js
+npm install ng-audio-video-call amazon-chime-sdk-js
 ```
 
 ---
@@ -20,7 +20,7 @@ npm install ng-video-call amazon-chime-sdk-js
 
 ```typescript
 // app.config.ts (standalone)
-import { NgVideoCallModule } from 'ng-video-call';
+import { NgVideoCallModule } from 'ng-audio-video-call';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -46,7 +46,7 @@ export const appConfig: ApplicationConfig = {
 ```
 
 ```typescript
-import { MeetingConfig } from 'ng-video-call';
+import { MeetingConfig } from 'ng-audio-video-call';
 
 onJoin(data: MeetingConfig) {
   this.config = {
@@ -96,7 +96,7 @@ onJoin(data: MeetingConfig) {
 ## Theming
 
 ```typescript
-import { ThemeService, ThemeConfig } from 'ng-video-call';
+import { ThemeService, ThemeConfig } from 'ng-audio-video-call';
 
 // Dark theme (default)
 themeService.apply({ mode: 'dark' });
@@ -134,7 +134,7 @@ All theme values are applied as CSS custom properties (`--ncc-*`) on `<html>`.
 Low-level AWS Chime SDK wrapper.
 
 ```typescript
-import { ChimeService } from 'ng-video-call';
+import { ChimeService } from 'ng-audio-video-call';
 
 // Join
 await chime.joinMeeting(config, options);
@@ -157,7 +157,7 @@ chime.activeSpeaker$  // BehaviorSubject<string | null>
 Higher-level state + toggle helpers.
 
 ```typescript
-import { MeetingStateService } from 'ng-video-call';
+import { MeetingStateService } from 'ng-audio-video-call';
 
 meetingState.state$           // Observable<MeetingState>
 meetingState.toggleMute()
@@ -170,7 +170,7 @@ meetingState.setLayout('spotlight' | 'grid' | 'sidebar')
 In-meeting chat state management.
 
 ```typescript
-import { ChatService } from 'ng-video-call';
+import { ChatService } from 'ng-audio-video-call';
 
 chat.sendMessage(senderId, senderName, content);
 chat.receiveMessage(senderId, senderName, content); // for incoming via data messages
@@ -265,4 +265,4 @@ npm run publish:lib
 
 ## License
 
-MIT © RedSky Mobility
+MIT

@@ -1,5 +1,5 @@
 /*
- * Public API Surface of ng-video-call
+ * Public API Surface of ng-audio-video-call
  */
 
 // Module

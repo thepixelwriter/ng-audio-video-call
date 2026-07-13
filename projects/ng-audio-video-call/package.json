@@ -1,6 +1,6 @@
 {
-  "name": "ng-video-call",
-  "version": "0.2.19",
+  "name": "ng-audio-video-call",
+  "version": "1.0.0",
   "description": "Enterprise-grade Angular communication SDK with video, audio, chat, and screen sharing powered by AWS Chime",
   "keywords": [
     "angular",
@@ -13,17 +13,25 @@
     "screen-sharing",
     "collaboration"
   ],
-  "author": "",
+  "author": "Gaurav Sharma (thepixelwriter)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thepixelwriter/ng-audio-video-call.git"
+  },
+  "homepage": "https://github.com/thepixelwriter/ng-audio-video-call#readme",
+  "bugs": {
+    "url": "https://github.com/thepixelwriter/ng-audio-video-call/issues"
+  },
   "peerDependencies": {
     "@angular/common": ">=16.0.0",
     "@angular/core": ">=16.0.0",
     "@angular/forms": ">=16.0.0",
     "@angular/platform-browser": ">=16.0.0",
-    "rxjs": ">=7.4.0"
+    "rxjs": ">=7.4.0",
+    "amazon-chime-sdk-js": "^3.22.0"
   },
   "dependencies": {
-    "amazon-chime-sdk-js": "^3.22.0",
     "tslib": "^2.3.0"
   },
   "sideEffects": false,

@@ -3,10 +3,10 @@ import { isPlatformBrowser } from '@angular/common';
 import { BehaviorSubject } from 'rxjs';
 import { ThemeConfig, ThemeColors, ThemeMode } from '../models/theme.models';
 
-const REDSKY_RED = '#D42222';
+const DEFAULT_PRIMARY = '#D42222';
 
 const DARK_COLORS: ThemeColors = {
-  primary:            REDSKY_RED,
+  primary:            DEFAULT_PRIMARY,
   primaryForeground:  '#ffffff',
   secondary:          '#0C1A35',
   secondaryForeground:'#C5D3EE',
@@ -22,7 +22,7 @@ const DARK_COLORS: ThemeColors = {
 };
 
 const LIGHT_COLORS: ThemeColors = {
-  primary:            REDSKY_RED,
+  primary:            DEFAULT_PRIMARY,
   primaryForeground:  '#ffffff',
   secondary:          '#EEF2FA',
   secondaryForeground:'#040F25',

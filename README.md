@@ -24,7 +24,7 @@ An enterprise-grade Angular communication library for video/audio conferencing, 
 ## Installation
 
 ```bash
-npm install ng-video-call
+npm install ng-audio-video-call
 ```
 
 > **Peer dependencies** — ensure your project has these installed:
@@ -55,7 +55,7 @@ Add `"moduleResolution": "bundler"` (or `"node16"`) to your `tsconfig.json` to r
 ```typescript
 // app.module.ts
 import { NgModule } from '@angular/core';
-import { NgVideoCallModule } from 'ng-video-call';
+import { NgVideoCallModule } from 'ng-audio-video-call';
 
 @NgModule({
   imports: [
@@ -73,7 +73,6 @@ export class AppModule {}
 ```typescript
 // app.config.ts
 import { ApplicationConfig } from '@angular/core';
-import { provideNgVideoCall } from 'ng-video-call'; // see note below
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -86,7 +85,7 @@ export const appConfig: ApplicationConfig = {
 Components are standalone and can be imported directly in any component:
 
 ```typescript
-import { MeetingRoomComponent } from 'ng-video-call';
+import { MeetingRoomComponent } from 'ng-audio-video-call';
 
 @Component({
   standalone: true,
@@ -173,7 +172,7 @@ A draggable mini meeting card that floats over your app and expands to full-scre
 
 ```typescript
 // Inject and start the overlay from anywhere in your app
-import { MeetingOverlayService } from 'ng-video-call';
+import { MeetingOverlayService } from 'ng-audio-video-call';
 
 constructor(private overlay: MeetingOverlayService) {}
 
@@ -235,7 +234,7 @@ A typical pattern: show the join screen, then navigate into the meeting.
 // meeting-page.component.ts
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { MeetingConfig } from 'ng-video-call';
+import { MeetingConfig } from 'ng-audio-video-call';
 
 @Component({
   standalone: true,
@@ -448,7 +447,7 @@ Without `NgVideoCallModule`, provide the token directly:
 
 ```typescript
 // app.config.ts
-import { NCC_ICON_CONFIG } from 'ng-video-call';
+import { NCC_ICON_CONFIG } from 'ng-audio-video-call';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -520,7 +519,7 @@ All services are provided via `NgVideoCallModule.forRoot()` or injected manually
 Reactive state source for the meeting.
 
 ```typescript
-import { MeetingStateService } from 'ng-video-call';
+import { MeetingStateService } from 'ng-audio-video-call';
 
 constructor(private meetingState: MeetingStateService) {}
 
@@ -541,7 +540,7 @@ this.meetingState.setLayout('grid');
 Low-level AWS Chime SDK wrapper.
 
 ```typescript
-import { ChimeService } from 'ng-video-call';
+import { ChimeService } from 'ng-audio-video-call';
 
 await this.chime.joinMeeting(meetingConfig, meetingOptions);
 await this.chime.leaveMeeting();
@@ -552,7 +551,7 @@ await this.chime.leaveMeeting();
 In-meeting chat state.
 
 ```typescript
-import { ChatService } from 'ng-video-call';
+import { ChatService } from 'ng-audio-video-call';
 
 this.chatService.chatState$.subscribe(state => {
   console.log(state.messages, state.unreadCount);
@@ -567,7 +566,7 @@ this.chatService.toggleChat();
 Apply or switch themes at runtime.
 
 ```typescript
-import { ThemeService } from 'ng-video-call';
+import { ThemeService } from 'ng-audio-video-call';
 
 this.themeService.apply({ mode: 'light' });
 this.themeService.toggleMode(); // dark ↔ light
@@ -578,7 +577,7 @@ this.themeService.toggleMode(); // dark ↔ light
 Manages the floating meeting overlay across routes.
 
 ```typescript
-import { MeetingOverlayService } from 'ng-video-call';
+import { MeetingOverlayService } from 'ng-audio-video-call';
 
 this.overlay.open({ meetingConfig, brandName: 'My App' });
 this.overlay.close();
@@ -645,14 +644,14 @@ import 'zone.js/plugins/zone-patch-rxjs';
 ## Workspace Structure
 
 ```
-ng-video-call-workspace/
+ng-audio-video-call-workspace/
   projects/
-    ng-video-call/          ← library source
+    ng-audio-video-call/          ← library source
       src/lib/
         components/         ← all UI components
         services/           ← ChimeService, MeetingStateService, etc.
         models/             ← TypeScript interfaces
-    ng-video-call-demo/     ← demo application
+    ng-audio-video-call-demo/     ← demo application
   angular.json
   package.json
   tsconfig.json

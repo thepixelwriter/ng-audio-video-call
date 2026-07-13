@@ -1,19 +1,21 @@
 {
-  "name": "ng-video-call-workspace",
+  "name": "ng-audio-video-call-workspace",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve ng-video-call-demo",
-    "start:demo": "ng serve ng-video-call-demo --open",
-    "build": "ng build ng-video-call",
-    "build:demo": "ng build ng-video-call-demo",
-    "build:lib:prod": "ng build ng-video-call --configuration production",
-    "watch": "ng build ng-video-call --watch --configuration development",
+    "sync:lib-version": "node ./scripts/sync-lib-version.mjs",
+    "start": "ng serve ng-audio-video-call-demo",
+    "start:demo": "ng serve ng-audio-video-call-demo --open",
+    "build": "npm run sync:lib-version && ng build ng-audio-video-call",
+    "build:demo": "ng build ng-audio-video-call-demo",
+    "build:lib:prod": "npm run sync:lib-version && ng build ng-audio-video-call --configuration production",
+    "watch": "npm run sync:lib-version && ng build ng-audio-video-call --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "publish:lib": "npm run build:lib:prod && cd dist/ng-video-call && npm publish"
+    "publish:lib": "npm run build:lib:prod && cd dist/ng-audio-video-call && npm publish --access public"
   },
   "private": true,
+  "author": "Gaurav Sharma (thepixelwriter)",
   "packageManager": "npm@11.14.1",
   "dependencies": {
     "@angular/animations": "^21.2.0",

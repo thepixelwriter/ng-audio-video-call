@@ -6,7 +6,7 @@ import {
   JoinScreenComponent,
   MeetingOverlayService,
   MeetingConfig,
-} from 'ng-video-call';
+} from 'ng-audio-video-call';
 
 @Component({
   selector: 'app-root',
